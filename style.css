@@ -1,0 +1,80 @@
+@import url('font.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+div {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  /* width: 300px; */
+  /* height: auto; */
+  margin: 5px;
+  border: none;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(164, 196, 223);
+  border-radius: 5px;
+  /* text-align: center; */
+}
+
+.title {
+  display: inline-flex;
+  width: 94%;
+  max-width: 1000px;
+  font-family: rubik;
+}
+
+.title h1 {
+  margin-left: 15%;
+}
+
+#right {
+  margin-left: 20%;
+}
+
+.body {
+  width: 94%;
+  max-width: 1000px;
+  display: inline-flex;
+}
+
+.segment {
+  width: 94%;
+  max-width: 1000px;
+}
+
+.contents {
+  width: 47%;
+  background-color: rgb(158, 136, 219);
+}
+
+.secondary {
+  width: 47%;
+  background-color: rgb(185, 150, 104);
+}
+
+.detail {
+  width: 90%;
+  height: auto;
+}
+
+p {
+  font-family: abhaya;
+}
+
+.image {
+  display: inline-block;
+  max-width: 1000px;
+}
+
+img {
+  margin: 0;
+  border: solid 4px white;
+  width: 323px;
+  border-radius: 5px;
+  box-shadow: rgb(102, 102, 102);
+}
