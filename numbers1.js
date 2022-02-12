@@ -85,5 +85,80 @@ function findSmaller(args) {
 // end of challenge
 
 //-----------------------------------------------------------
+//Letters must be between a and m
+// count the number of letters in error, show that divided by the total number of letters
+const colors = new Set([
+  'a',
+  'b',
+  'c',
+  'd',
+  'e',
+  'f',
+  'g',
+  'h',
+  'i',
+  'j',
+  'k',
+  'l',
+  'm',
+]);
+const printErrors = function (s) {
+  const printArray = s.split('');
+  let error = 0;
+  for (const item of printArray) {
+    if (!colors.has(item)) error++;
+  }
+  return `${error}/${s.length}`;
+};
+
+//console.log(printErrors('aaabbbbhaijjjmwwmwmyy'));
+
+/// Another way
+
+function printerError(s) {
+  // your code
+  var count = 0;
+  for (var i = 0; i < s.length; i++) {
+    if (s[i] > 'm') {
+      /// less/greater than works in the alphabet
+      count++;
+    }
+  }
+  return count + '/' + s.length;
+}
+
+// another answer using reg exp
+// this solution removes the non-errors
+const prtError = s => `${s.replace(/[a-m]/gi, '').length}/${s.length}`;
+
+//Another solution w reg exp
+// this solutioon matches the errors
+const printsError = s => (s.match(/[n-z]/g) || []).length + '/' + s.length;
 
 //end of challenge
+
+//-----------------------------------------------------------
+//Determine whether a string of only letters is an isogram(no repeats)
+// take into consideration upper and lower case letters
+const dates = function (s) {
+  const upper = s.toUpperCase();
+  const strSet = [...new Set(upper)].join('');
+  return upper === strSet || upper === '';
+};
+
+//console.log(dates('moOse'));
+
+// another way with confusing reg exp
+
+function isaIsogram(str) {
+  return !/(\w).*\1/i.test(str);
+}
+
+// another way compares the length of the strings
+const isIsogram = str => new Set([...str.toLowerCase()]).size == str.length;
+
+// end of challenge
+
+//-----------------------------------------------------------
+
+// end of challenge
