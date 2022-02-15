@@ -57,6 +57,15 @@ console.log(series(1));
 console.log(series(2));
 console.log(series(3));
 
+// another way using an array???
+function seriesII(n) {
+  return Array(n)
+    .fill(0)
+    .map((e, i) => 3 * i + 1)
+    .reduce((s, e) => s + 1 / e, 0)
+    .toFixed(2);
+}
+
 /// end of challenge
 
 // ---------------------------------------------
