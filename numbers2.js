@@ -15,10 +15,10 @@ const addIter = function (num) {
   }
 };
 
-console.log(addIter(1));
-console.log(addIter(2));
-console.log(addIter(38));
-console.log((1 / 10).toFixed(2));
+// console.log(addIter(1));
+// console.log(addIter(2));
+// console.log(addIter(38));
+// console.log((1 / 10).toFixed(2));
 
 // This failed at the really high numbers
 
@@ -34,17 +34,17 @@ const seriesSum = function (n) {
   }
 };
 
-console.log(seriesSum(0));
-console.log(seriesSum(1));
-console.log(seriesSum(2));
-console.log(seriesSum(39));
+// console.log(seriesSum(0));
+// console.log(seriesSum(1));
+// console.log(seriesSum(2));
+// console.log(seriesSum(39));
 
 // this one WORKED!!
 
 // much better way
 
 function series(n) {
-  for (let s = 0, i = 0; i < n; i++) {
+  for (var s = 0, i = 0; i < n; i++) {
     // when n is 0 loop doesnt even run
     s += 1 / (1 + i * 3);
   }
@@ -52,10 +52,10 @@ function series(n) {
   return s.toFixed(2);
 }
 
-console.log(series(0));
-console.log(series(1));
-console.log(series(2));
-console.log(series(3));
+// console.log(series(0));
+// console.log(series(1));
+// console.log(series(2));
+// console.log(series(3));
 
 // another way using an array???
 function seriesII(n) {
@@ -69,3 +69,29 @@ function seriesII(n) {
 /// end of challenge
 
 // ---------------------------------------------
+//In this simple assignment you are given a number and have to make it negative.
+//But maybe the number is already negative?
+
+const makeNeg = function (n) {
+  let m = Math.abs(n);
+  return m - m * 2;
+};
+
+console.log(makeNeg(1));
+console.log(makeNeg(-5));
+console.log(makeNeg(0));
+console.log(makeNeg(0.12));
+
+console.log(Math.abs(-5));
+
+// much simpler way and the fastest
+
+function makeNeg1(num) {
+  return num <= 0 ? num : -num;
+}
+
+// another variation
+
+function makeNeg2(num) {
+  return -Math.abs(num);
+}
