@@ -77,12 +77,12 @@ const makeNeg = function (n) {
   return m - m * 2;
 };
 
-console.log(makeNeg(1));
-console.log(makeNeg(-5));
-console.log(makeNeg(0));
-console.log(makeNeg(0.12));
+// console.log(makeNeg(1));
+// console.log(makeNeg(-5));
+// console.log(makeNeg(0));
+// console.log(makeNeg(0.12));
 
-console.log(Math.abs(-5));
+// console.log(Math.abs(-5));
 
 // much simpler way and the fastest
 
@@ -95,3 +95,59 @@ function makeNeg1(num) {
 function makeNeg2(num) {
   return -Math.abs(num);
 }
+
+// end of challenge
+//----------------------------------------------
+
+// create a bubble sort function
+
+// first we need to learn how to swap values of an array
+
+const apple = [3, 4];
+
+// console.log(apple);
+
+[apple[0], apple[1]] = [apple[1], apple[0]];
+// console.log(apple);
+
+// that worked
+
+const bubbleSort = function (array) {
+  // Bubble Sort function
+  let unsortedIndex = array.length - 1;
+  let sorted = false;
+
+  while (!sorted) {
+    sorted = true;
+    for (let i = 0; i < unsortedIndex; i++) {
+      if (array[i] > array[i + 1]) {
+        [array[i], array[i + 1]] = [array[i + 1], array[i]];
+        sorted = false;
+      }
+    }
+    unsortedIndex--;
+  }
+  return array;
+};
+
+// console.log(bubbleSort([7, 2, 1, 3, 4]));
+
+const createRandomArray = function (num) {
+  // create a random Set of numbers
+  const setOne = new Set();
+  for (let i = 0; i < num; i++) {
+    setOne.add(Math.trunc(Math.random() * 100) + 1);
+  }
+  return setOne;
+};
+
+const grape = [...createRandomArray(10)]; // convert the Set to an Array
+
+// console.log(grape);
+
+bubbleSort(grape);
+// console.log(grape);
+
+// end of challenge
+
+//---------------------------------------
