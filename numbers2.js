@@ -132,6 +132,8 @@ const bubbleSort = function (array) {
 
 // console.log(bubbleSort([7, 2, 1, 3, 4]));
 
+// this function creates a random Set of numbers(no duplicates)
+
 const createRandomArray = function (num) {
   // create a random Set of numbers
   const setOne = new Set();
@@ -151,3 +153,32 @@ bubbleSort(grape);
 // end of challenge
 
 //---------------------------------------
+// Section Sort Algorithm
+
+const selectSort = function (array) {
+  for (let i = 0; i < array.length - 1; i++) {
+    // this loop doesnt include the last element
+    let lowNumIndex = i; // used to keep track of the index of the lowest number
+    for (let j = i + 1; j < array.length; j++) {
+      // this loop starts where i is and goes to the end
+      // First step is to loop through the array and find the lowest
+      if (array[j] < array[lowNumIndex]) {
+        // compare current to lowest num
+        lowNumIndex = j; // if it is lower set it as the lowest
+      }
+    }
+    if (lowNumIndex != i) {
+      // if the lowNumIndex is not the current index then switch them
+      [array[i], array[lowNumIndex]] = [array[lowNumIndex], array[i]];
+    }
+  }
+  return array;
+};
+
+const walnut = [...createRandomArray(10)];
+
+console.log(walnut);
+
+console.log(selectSort(walnut));
+
+// end of challenge
