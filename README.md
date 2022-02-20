@@ -48,3 +48,9 @@ The test method returns either true or false if the expression matches something
 Since the expression is looking for an instance of a repeating character, and the kata is to test the reverse, we simply invert the resulting boolean.
 
 ---
+
+## Couple things I didn't know
+
+1. You can use <> (greater-than or less-than) with the alphabet
+2. putting a minus sign in front of a number variable makes it negative
+3. Website to train on Regular Expressions [RegEx Crossword](https://regexcrossword.com/)
