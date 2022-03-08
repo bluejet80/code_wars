@@ -83,4 +83,110 @@ const number2 = function (busStops) {
 };
 
 // end of challenge
+
 //------------------------------
+//write a function that takes as an argument a sequence and
+//retuns a list of items without any duplicate elements next
+// to each other, preserving the original order of the elements
+//example uniqueInOrder('AAAABBBCCDAABBB') == ['A','B','C','D','A','B']
+// first parse the input
+// if input is an array then skip parsing
+const uniqueInOrder = function (seq) {
+  const beans = [];
+  let corn;
+  for (let i = 0; i < seq.length; i++) {
+    if (corn === seq[i]) {
+      continue;
+    } else {
+      beans.push(seq[i]);
+    }
+    corn = seq[i];
+  }
+  return beans;
+};
+
+console.log(uniqueInOrder('AAAABBBCCDAABBB'));
+// this worked
+// better versions to follow
+
+// more concise
+function uniqueInOrder1(it) {
+  var result = [];
+  var last;
+
+  for (var i = 0; i < it.length; i++) {
+    if (it[i] !== last) {
+      result.push((last = it[i]));
+    }
+  }
+
+  return result;
+}
+
+// even fewer lines of code
+const uniqueInOrder2 = function (iterable) {
+  return [...iterable].filter((a, i) => a !== iterable[i - 1]);
+};
+
+// another one
+const uniqueInOrder3 = function (iterable) {
+  return [].filter.call(iterable, function (a, i) {
+    return iterable[i - 1] !== a;
+  });
+};
+
+// arrow function
+const uniqueInOrder4 = d => [...d].filter((x, i, a) => x != a[i + 1]);
+
+//one more iteration
+const uniqueInOrder5 = function (iterable) {
+  var res = [];
+  for (var i = 0; i < iterable.length; i++) {
+    if (iterable[i] != iterable[i + 1]) res.push(iterable[i]);
+  }
+  return res;
+};
+
+//end of challenge
+/////////////////////////
+
+//---------------------------
+//Write a function that takes a number as input and 
+//returns the sum of the digits of the number
+
+const addDigits = function (number) { // convert a number into an array of digits.
+	const arr = `${number}`.split('').map(Number) 
+		let total = 0
+	for(const item of arr){
+		if(item) total += item }
+	return total
+}
+console.log(addDigits(1234))
+// That worked
+//
+// Here is another way to do it with less lines
+function sumDigits(number) {
+  return Math.abs(number).toString().split('').reduce(function(a,b){return +a + +b}, 0);
+}
+//This is the way I wanted to do it but I couldnt get it.
+//
+//Here is an example with the ForEach function
+function sumDigits1(number) {
+  var str_num = "" + number;
+  
+  var result = 0;
+  str_num.split('').forEach(function(el) {
+    var digit = parseInt(el);
+    if(isNaN(digit)) {
+      return;
+    }
+    
+    result += digit;
+  });
+  
+  return result;
+}
+//End of Challenge
+//
+//----------------------------
+//
