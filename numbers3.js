@@ -189,4 +189,35 @@ function sumDigits1(number) {
 //End of Challenge
 //
 //----------------------------
+// Write a function that takes a list of strings and returns something like this:
+// number(['a','b','c']) // => ['1: a','2: b','3: c']
+
+const lineNumber0 = (str) => str.map(x => `${str.indexOf(x) + 1}: ${x}`)
+
+console.log(lineNumber0(['a','','c']))
+//didnt work because the array items are not unique
+
+
+const lineNumber1 = function(array) {
+	let lineNum = 1
+	const newArr = []
+	for (const item of array) {
+		newArr.push(`${lineNum}: ${item}`)
+		lineNum++
+	}
+	return newArr
+}
+
+console.log(lineNumber1(['a','a','','b']))
+// This worked 
+// I was really close on the first one but I didnt understand the map method enough
 //
+// The one liner
+
+const number = (a) => a.map((v, i) => `${i + 1}: ${v}`)
+
+// end of challenge
+//
+// ------------------------------
+//
+
