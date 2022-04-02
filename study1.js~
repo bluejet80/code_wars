@@ -240,17 +240,6 @@ function amountOfPages (summary) {
 
 }
 
-//another way of doing it
-//This function just goes to show that if you are trying to solve a 
-//challenge and it is getting complex, then you need to approach it 
-//from a different angle. 
-//In this case I was focused on the mathmatical aspect of the solution,
-//Where the simple solution was to treat the whole thing like a string
-//and just get the length of the string
-//---------
-
-
-
 function amountOfPages2(summary){
   let counter = 1;
   let string = '';
@@ -288,9 +277,3 @@ doubleOrNothing2=(a,b,c)=>(a=>a<0?"I'll pay you back later":a)(a-b*2**(c-1))
 //end of challenge
 //
 //-----------------------------------------
-//https://www.codewars.com/kata/56dbe0e313c2f63be4000b25/train/javascript
-//First of four squared strings challenges
-//Horiz mirror and Vert Mirror
-//given string: s = "abcd\nefgh\nijkl\nmnop"
-// vert_mirror(s) => "dcba\nhgfe\nlkji\nponm" 
-// hor_mirror(s) => "mnop\nijkl\nefgh\nabcd"

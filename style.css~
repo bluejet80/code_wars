@@ -29,7 +29,13 @@ div {
   justify-content: space-between;
 }
 
+.title h1 {
+  margin-left: 15%;
+}
 
+#right {
+  margin-left: 20%;
+}
 
 .body {
   width: 94%;

@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Code Wars Study Site</title>
+  </head>
+  <body>
+	  <div class='title'><p>Created for notes on 3/25/22</p><h1>Code Wars Study Guide</h1><p>Author: Jarett Young</p></div>
+<div class='body'>
+	<div class='segment'>
+	<ul>
+		<li><a href='#link1'></a></li>
+		<li><a href='#link2'></a></li>
+		<li><a href='#link3'></a></li>
+		<li><a href='#link4'></a></li>
+		<li><a href='#link5'></a></li>
+		<li><a href='#link6'></a></li>
+		<li><a href='#link7'></a></li>
+	</ul>
+	</div>
+
+	<div class="segment"><h3 id='link1' style='text-align: center;'>Sort a number in descending order</h3>
+		<p>One way you can achieve this is by using the sort method.</p>
+	<pre><code>
+const descendNumber = function (number) {
+  const numArray = Array.from(number.toString()).sort().reverse();
+  return Number(numArray.join(''));
+};
+	</code></pre>
+		<p>So here we first change the number into a string, and then we must turn it into an array in order to sort it, and then reverse it. Then we join the array back into a sring and then turn it into a number. </p>
+	</div>
+	</div>
+<script src="curry_study.js"></script>
+</body>
+</html>
+
+</html>
