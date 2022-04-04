@@ -19,10 +19,10 @@ const nextCharForNumberString = str =>
  .map(s => parseInt(s))
  .map(i => i + 1)
  .map(i => String.fromCharCode(i))
- .map(c => c.toLowerCase())
- .inspect()
+ .fold(c => c.toLowerCase())
 
 const result = nextCharForNumberString('  64  ')
 
 console.log(result)
+
 
