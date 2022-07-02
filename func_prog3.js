@@ -1,3 +1,4 @@
+'use strict'
 // To begin with we have these functions that we will be refactoring
 // with our Box object in a more functional programmming style. 
 
