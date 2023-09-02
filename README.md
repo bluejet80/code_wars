@@ -1,3 +1,13 @@
+# Project
+`code_wars`
+`/home/bluejet/programming/javascript/code_wars`
+
+# Description
+This project is comprised of notes from doing codeWars Challenges.
+
+It gives some tip on Regular Expressions
+
+
 ## Explaining Reg Exp
 
 See explanation for RegExp here: https://www.debuggex.com/cheatsheet/regex/javascript
